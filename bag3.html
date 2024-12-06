@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  صحة الأم الحامل</title>
+    <style>
+    
+/***/
+.buttonn {
+    width: 100%;
+    padding: 10px;
+    background-color: #e771c4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.containerr {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.h11 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    margin: 10px 0 5px;
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.buttonn:hover {
+    width: 100%;
+    padding: 10px;
+    background-color: #e771c4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonn:hover {
+    background-color: #c3718a;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+/**/
+        .container {
+            margin: 20px;
+        }
+
+        .button {
+            background-color:#f04d84;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 22px;
+            margin-bottom: 10px;
+            font-size: larger;
+        }
+
+        .button:hover {
+            background-color: #ee105a;
+        }
+
+        .content {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        /* *************** */
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+mark {
+            background-color: #fe2f97; 
+            color: #000; 
+            font-weight: bold;
+        }
+
+        .container {
+            font-size: larger;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #e91e63;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .tips {
+            border-left: 4px solid #e91e63;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #e91e63;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: #e91e63;
+            font-weight: bold;
+        }
+
+        /***/
+        @media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    table {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+    }
+    .button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    input {
+        padding: 8px;
+    }
+}
+@media (max-width: 480px) {
+    .timeline-container {
+        padding-left: 20px;
+    }
+
+    .timeline-container::before {
+        left: 10px;
+    }
+
+    .stage .content {
+        padding: 8px;
+    }
+
+    .button, .buttonn, .button3 {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+
+    input, .input2 {
+        font-size: 0.8rem;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+}
+
+.stage img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.5s ease;
+}
+       /*  *********جدول************ */
+              
+        table {
+          
+    overflow-x: auto;
+    display: block;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e91e63; /* حدود زهرية */
+        }
+        th {
+            background-color: #e91e63; /* خلفية زهرية للعناوين */
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #fbeaf3; /* خلفية وردية فاتحة للصفوف الزوجية */
+        }
+        tr:nth-child(odd) {
+            background-color: #fff; /* خلفية بيضاء للصفوف الفردية */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- زر 1 -->
+        <button class="button" onclick="toggleContent('content1')">
+            <span id="icon1" class="icon">+</span>
+            صحة الأم فترة الحمل :
+        </button>
+        <div id="content1" class="content">
+        <div class="container">
+            <h1>نصائح لفترة الحمل</h1>
+            <p>فترة الحمل تعتبر <span class="highlight">حرجة</span> ويجب على الأم توخي الحذر من السلوكيات السلبية التي قد تؤثر
+                على صحتها وصحة الجنين. إليك بعض النصائح المفيدة:</p>
+        
+            <ul>
+                <li>
+                    <div class="section-title">1. التغذية</div>
+                    <div class="tips">
+                        <p>• نظام غذائي متوازن: يُوصى بتناول نظام غذائي غني بالخضروات والفواكه والبروتينات الصحية.
+                            <a href="#con2">اقرأ المزيد</a>
+                        </p>
+                        <p>• حمض الفوليك: تناول مكملات حمض الفوليك يومياً للوقاية من عيوب الأنبوب العصبي.</p>
+                        <p>• الحديد والكالسيوم: لضمان تطور الجنين ومنع نقص العناصر الغذائية.</p>
+                        <p>• الترطيب: شرب كميات كافية من الماء لدعم الدورة الدموية.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="section-title">2. النشاط البدني</div>
+                    <div class="tips">
+                        <p>• ممارسة تمارين خفيفة مثل المشي أو السباحة أو اليوغا للحوامل.</p>
+                        <p>• تجنب الأنشطة ذات التأثير القوي أو المخاطر المحتملة.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="section-title">3. الرعاية الطبية</div>
+                    <div class="tips">
+                        <p>• حضور جميع مواعيد المتابعة الطبية. <a href="bag8.html">اقرأ المزيد</a></p>
+                        <p>• إجراء الفحوصات اللازمة حسب توصيات الطبيب.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="section-title">4. تجنب المواد الضارة</div>
+                    <div class="tips">
+                        <p>• تجنب التدخين: لأنه يزيد من خطر الولادة المبكرة وانخفاض وزن الجنين عند الولادة.</p>
+                        <p>• الامتناع عن الكحول: لتجنب متلازمة الكحول الجنينية والمشاكل التنموية.</p>
+                        <p>• تقليل الكافيين: إلى أقل من 200 ملغ يوميًا (ما يعادل كوباً واحداً من القهوة بحجم 12 أونصة).</p>
+                        <p>• تجنب الأدوية والمخدرات: إلا إذا كانت بوصفة طبية وتحت إشراف طبي.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="section-title">5. الصحة النفسية</div>
+                    <div class="tips">
+                        <p>• إدارة التوتر: من خلال تقنيات الاسترخاء مثل التأمل أو التنفس العميق أو جلسات التدليك المخصصة للحوامل.</p>
+                        <p>• الحصول على الدعم: من خلال المجموعات الداعمة أو الأصدقاء أو العائلة أو المختصين عند الشعور بالقلق أو الضغط
+                            النفسي.<a href="bag6.html">اقرأ المزيد</a></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="section-title">6. اللقاحات والتدابير الوقائية</div>
+                    <div class="tips">
+                        <p>• أخذ اللقاحات الموصى بها مثل لقاح الإنفلونزا ولقاح التيتانوس والدفتيريا والسعال الديكي (Tdap).</p>
+                        <p>• تجنب التعرض للعدوى مثل التوكسوبلازما (من اللحوم غير المطهية جيدًا أو فضلات القطط) أو الليستيريا (من منتجات
+                            الألبان غير المبسترة).</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="section-title">7. التثقيف والاستعداد</div>
+                    <div class="tips">
+                        <p>• حضور دورات تدريبية عن الولادة ورعاية الأطفال لتحضير الأم نفسيًا وجسديًا للمرحلة المقبلة.</p>
+                        <p>• التعرف على فوائد الرضاعة الطبيعية وطريقة ممارستها.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="section-title">8. تجنب المخاطر البيئية</div>
+                    <div class="tips">
+                        <p>• الحد من التعرض للمواد السامة والمعادن الثقيلة والملوثات.</p>
+                        <p>• تجنب استخدام حمامات البخار أو الساونا أو أي أنشطة ترفع حرارة الجسم بشكل مفرط.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="section-title">9. الراحة والنوم</div>
+                    <div class="tips">
+                        <p>• إعطاء الأولوية للراحة والنوم. يمكن استخدام الوسائد الداعمة والنوم على الجانب الأيسر لتحسين الدورة الدموية.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        </div>
+
+
+
+        <!-- زر 2 -->
+        <button id="con2" class="button" onclick="toggleContent('content2')">
+            <span id="icon2" class="icon">+</span>
+        التغذية خلال فترة الحمل
+        </button>
+        <div id="content2" class="content">
+<div class="container" >
+    <h1>الفيتامينات المهمة خلال الحمل</h1>
+    <p>الحامل تحتاج إلى مجموعة متنوعة من الفيتامينات والمعادن خلال فترات الحمل المختلفة لدعم نمو الجنين وصحتها العامة.
+        إليك قائمة بالفيتامينات المهمة لكل فترة وأهم مصادرها الغذائية:</p>
+
+    <h3 class="highlight"><mark> الثلاثة أشهر الأولى (1-3 أشهر)  </mark></h3>
+    <p><span class="highlight">هدف التغذية:</span> دعم تطور الأنبوب العصبي للجنين.</p>
+    <ul>
+        <li>
+            <div class="section-title">1. حمض الفوليك (فيتامين B9)</div>
+            <div class="tips">
+                <p><span class="highlight">الأهمية:</span> يمنع العيوب الخلقية للأنبوب العصبي.</p>
+                <p><span class="highlight">المصادر الغذائية:</span> السبانخ، البروكلي، العدس، الحمضيات (البرتقال
+                    والليمون)، المكسرات.</p>
+            </div>
+        </li>
+        <li>
+            <div class="section-title">2. فيتامين B6</div>
+            <div class="tips">
+                <p><span class="highlight">الأهمية:</span> يخفف من غثيان الصباح.</p>
+                <p><span class="highlight">المصادر الغذائية:</span> الدجاج، البطاطا، الموز، الحبوب الكاملة.</p>
+            </div>
+        </li>
+        <li>
+            <div class="section-title">3. فيتامين D</div>
+            <div class="tips">
+                <p><span class="highlight">الأهمية:</span> يدعم صحة العظام وتكوين الهيكل العظمي للجنين.</p>
+                <p><span class="highlight">المصادر الغذائية:</span> الأسماك الدهنية (السلمون، التونة)، الحليب المدعم،
+                    البيض.</p>
+            </div>
+        </li>
+    </ul>
+
+    <h3 class="h"> <mark> الثلاثة أشهر الوسطى (4-6 أشهر)  </mark>  </h3>
+    <p><span class="highlight">هدف التغذية:</span> دعم نمو الجنين وتطور الأعضاء.</p>
+    <ul>
+        <li>
+            <div class="section-title">1. الحديد</div>
+            <div class="tips">
+                <p><span class="highlight">الأهمية:</span> الوقاية من فقر الدم، وزيادة تدفق الأكسجين للجنين.</p>
+                <p><span class="highlight">المصادر الغذائية:</span> اللحوم الحمراء، الكبد، السبانخ، البقوليات.</p>
+            </div>
+        </li>
+        <li>
+            <div class="section-title">2. الكالسيوم</div>
+            <div class="tips">
+                <p><span class="highlight">الأهمية:</span> بناء عظام وأسنان الجنين.</p>
+                <p><span class="highlight">المصادر الغذائية:</span> الحليب ومشتقاته، السردين، اللوز.</p>
+            </div>
+        </li>
+        <li>
+            <div class="section-title">3. فيتامين C</div>
+            <div class="tips">
+                <p><span class="highlight">الأهمية:</span> يساعد على امتصاص الحديد ويقوي جهاز المناعة.</p>
+                <p><span class="highlight">المصادر الغذائية:</span> الفلفل الأحمر، الكيوي، الفراولة، البرتقال.</p>
+            </div>
+        </li>
+    </ul>
+
+    <h3> <mark> الثلاثة أشهر الأخيرة (7-9 أشهر)</mark> </h3>
+    <p><span class="highlight">هدف التغذية:</span> دعم وزن الجنين ونمو الدماغ.</p>
+    <ul>
+        <li>
+            <div class="section-title">1. أوميغا 3 (DHA)</div>
+            <div class="tips">
+                <p><span class="highlight">الأهمية:</span> يدعم نمو الدماغ والعينين.</p>
+                <p><span class="highlight">المصادر الغذائية:</span> الأسماك الدهنية، بذور الشيا، الجوز.</p>
+            </div>
+        </li>
+        <li>
+            <div class="section-title">2. فيتامين K</div>
+            <div class="tips">
+                <p><span class="highlight">الأهمية:</span> يساعد على تخثر الدم بشكل طبيعي أثناء الولادة.</p>
+                <p><span class="highlight">المصادر الغذائية:</span> الخضروات الورقية مثل الكرنب والسبانخ.</p>
+            </div>
+        </li>
+        <li>
+            <div class="section-title">3. المغنيسيوم</div>
+            <div class="tips">
+                <p><span class="highlight">الأهمية:</span> يقلل من تقلصات العضلات ويحسن النوم.</p>
+                <p><span class="highlight">المصادر الغذائية:</span> المكسرات، البذور، الأفوكادو، الشوكولاتة الداكنة.</p>
+            </div>
+        </li>
+    </ul>
+
+    <h3> <mark> نصائح تغذوية طوال فترة الحمل :</mark></h3>
+    <ul>
+        <li><span class="highlight">1.</span> الحفاظ على وزن صحي قبل الحمل: تفادي الوزن الزائد أو الناقص لتجنب المخاطر
+            الصحية.</li>
+        <li><span class="highlight">2.</span> شرب الماء بكثرة لتجنب الإمساك والحفاظ على صحة الجنين.</li>
+        <li><span class="highlight">3.</span> تجنب الكافيين والكحول والتدخين.</li>
+        <li><span class="highlight">4.</span> تناول غذاء متوازن ومتنوع: يشمل الخضروات، الفواكه، الحبوب الكاملة،
+            والبروتينات.</li>
+    </ul>
+
+    <h3><mark>الزيادة في الوزن: </mark> </h3>
+    <p>من الطبيعي أن تلاحظي زيادة في الوزن مقارنة بالفترة ما قبل الحمل. لكن ما هو الحد الطبيعي لزيادة الوزن؟</p>
+    <p>بالثلث الأول من الحمل سيزداد وزنك بما يقارب <span class="highlight">1.2 كيلوغرام</span>. أما في الثلث الثاني
+        والثالث، ستلاحظين زيادة تدريجية بما يتناسب مع مؤشر كتلة جسمك وعدد أسابيع حملك.</p>
+
+<h2>مؤشر كتلة الجسم أثناء الحمل</h2>
+<table>
+    <thead>
+        <tr>
+            <th>مؤشر كتلة الجسم (BMI)</th>
+            <th>الزيادة الأسبوعية</th>
+            <th>الزيادة الكلية في الحمل</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>أقل من 18.5</td>
+            <td>0.5 - 1 كيلوغرام أسبوعًيا</td>
+            <td>12.5 - 18 كيلوغرام</td>
+        </tr>
+        <tr>
+            <td>18.5 - 24.9</td>
+            <td>0.4 - 1 كيلوغرام أسبوعًيا</td>
+            <td>11.5 - 16 كيلوغرام</td>
+        </tr>
+        <tr>
+            <td>25 - 29.9</td>
+            <td>0.3 - 0.5 كيلوغرام أسبوعًيا</td>
+            <td>7 - 11.5 كيلوغرام</td>
+        </tr>
+        <tr>
+            <td>أعلى من 30</td>
+            <td>0.2 - 0.3 كيلوغرام أسبوعًيا</td>
+            <td>5 - 9 كيلوغرام</td>
+        </tr>
+    </tbody>
+</table>
+<div class="containerr">
+    <h1 class="h11">آلة حاسبة لمؤشر كتلة الجسم</h1>
+    <label for="weight">الوزن (بالكيلوغرام):</label>
+    <input type="number" id="weight" placeholder="أدخل الوزن">
+
+    <label for="height">الطول (بالسنتيمتر):</label>
+    <input type="number" id="height" placeholder="أدخل الطول">
+
+    <button class="buttonn" id="calculate">احسب</button>
+
+    <div id="result"></div>
+</div>
+
+
+    </div>
+        </div>
+
+        <!-- زر 3 -->
+        <button class="button" onclick="toggleContent('content3')">
+            <span id="icon3" class="icon">+</span>
+            التمارين الرياضية خلال الحمل
+        </button>
+        <div id="content3" class="content">
+<div class="container">
+<h1>ممارسة الرياضة أثناء الحمل</h1>
+<p>ممارسة الرياضة أثناء الحمل لها فوائد عديدة لصحتك وصحة جنينك، ولكن من المهم اختيار التمارين المناسبة وتجنب تلك التي قد
+    تسبب الضرر.</p>
+
+<h2>  <mark>الرياضات المناسبة للحوامل:</mark></h2>
+<p>تعتبر هذه الرياضات آمنة بشكل عام للحوامل عند ممارستها بشكل معتدل وبإشراف طبي:</p>
+<ul>
+    <li>
+        <div class="section-title">1. المشي</div>
+        <div class="tips">
+            <p>من أسهل وأفضل التمارين للحوامل، حيث يحسن الدورة الدموية ويقوي العضلات.</p>
+        </div>
+    </li>
+    <li>
+        <div class="section-title">2. السباحة</div>
+        <div class="tips">
+            <p>تقلل الضغط على المفاصل وتقوي عضلات القلب والرئة.</p>
+        </div>
+    </li>
+    <li>
+        <div class="section-title">3. اليوغا</div>
+        <div class="tips">
+            <p>تزيدان المرونة والتوازن وتساعدان على الاسترخاء.</p>
+        </div>
+    </li>
+    <li>
+        <div class="section-title">4. الرقص الخفيف</div>
+        <div class="tips">
+            <p>يحسن المزاج ويقوي العضلات.</p>
+        </div>
+    </li>
+    <li>
+        <div class="section-title">5. التدريب على مقاومة خفيفة</div>
+        <div class="tips">
+            <p>باستخدام أوزان خفيفة أو أشرطة مقاومة.</p>
+        </div>
+    </li>
+</ul>
+
+<h2> <mark> الرياضات الممنوعة للحوامل:</mark> </h2>
+<p>يجب تجنب هذه الرياضات أو ممارستها بحذر شديد:</p>
+<ul>
+    <li>
+        <div class="section-title">الرياضات العنيفة: </div>
+        <div class="tips">
+            <p> مثل الملاكمة والمصارعة، حيث تزيد من خطر الإصابة</p>
+        </div>
+    </li>
+    <li>
+        <div class="section-title">  الرياضات التي تتطلب التوازن الشديد: </div>
+        <div class="tips">
+<p> مثل التزلج على الجليد أو ركوب الأمواج، حيث تزيد من خطر السقوط </p>    
+    </div>
+    </li>
+    <li>
+        <div class="section-title"> الرياضات التي تسبب ارتفاع درجة حرارة الجسم: </div>
+        <div class="tips">
+<p>  مثل السونا والجاكوزي، حيث قد تؤثر على الجنين </p>    
+    </div>
+    </li>
+<li>
+    <div class="section-title"> الرياضات التي تضع ضغطاً على البطن: </div>
+    <div class="tips">
+    </div>
+    <p>  مثل رفع الأثقال الثقيلة </p>
+</li>
+<li>
+    <div class="section-title"> </div>
+    <div class="tips">
+    </div>
+    <p>  حيث قد تضغط على الأوردة الكبيرة وتقلل تدفق الدم إلى الجنين</p>
+</li>
+</ul>
+
+<h2> <mark>نصائح هامة: </mark></h2>
+<ul>
+    <li>الاستماع لجسمك: إذا شعرت بأي ألم أو إرهاق، توقفي عن ممارسة التمرين واستريحي.</li>
+    <li>الترطيب: اشربي كمية كافية من الماء قبل، أثناء، وبعد التمرين.</li>
+    <li>التمارين الخفيفة والمتدرجة: ابدئي بتمارين خفيفة وزيّدي من شدتها تدريجياً.</li>
+    <li>التركيز على التنفس: حافظي على تنفس عميق وهادئ أثناء التمرين.</li>
+</ul>
+
+<h2>  <mark> فوائد ممارسة الرياضة أثناء الحمل:</mark>  </h2>
+<ul>
+    <li>تحسين المزاج وتقليل التوتر.</li>
+    <li>زيادة الطاقة والقدرة على التحمل.</li>
+    <li>تقليل آلام الظهر والانتفاخ.</li>
+    <li>تحسين نوعية النوم.</li>
+    <li>التحضير الجسدي للولادة.</li>
+</ul>
+
+</div>
+        </div>
+
+       
+    </div>
+
+    <script>
+        function toggleContent(contentId) {
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById("icon" + contentId.charAt(contentId.length - 1));
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.textContent = "+";
+            } else {
+                content.style.display = "block";
+                icon.textContent = "-";
+            }
+        }
+
+        /*اله حاسبة مؤشر الكتلة*/
+          document.getElementById('calculate').addEventListener('click', function () {
+                const weight = parseFloat(document.getElementById('weight').value);
+                const height = parseFloat(document.getElementById('height').value) / 100; // تحويل إلى متر
+
+                if (isNaN(weight) || isNaN(height) || height <= 0) {
+                    document.getElementById('result').innerText = "يرجى إدخال وزن وطول صحيحين.";
+                    return;
+                }
+
+                const bmi = weight / (height * height);
+                let category = '';
+
+                if (bmi < 18.5) {
+                    category = 'نقص الوزن';
+                } else if (bmi < 24.9) {
+                    category = 'وزن طبيعي';
+                } else if (bmi < 29.9) {
+                    category = 'زيادة الوزن';
+                } else {
+                    category = 'سمنة';
+                }
+
+                document.getElementById('result').innerText = `مؤشر كتلة الجسم: ${bmi.toFixed(2)} (${category})`;
+            });
+
+            
+    </script>
+
+</body>
+
+</html>

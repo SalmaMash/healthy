@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> الانزعاجات البسيطة</title>
+  <style>
+    /***/
+    .buttonn {
+      width: 100%;
+      padding: 10px;
+      background-color: #e771c4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .containerr {
+      background: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .h11 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .buttonn:hover {
+      width: 100%;
+      padding: 10px;
+      background-color: #e771c4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buttonn:hover {
+      background-color: #c3718a;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    /**/
+    .container {
+      margin: 20px;
+    }
+
+    .button {
+      background-color: #f04d84;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 22px;
+      margin-bottom: 10px;
+      font-size: larger;
+    }
+
+    .button:hover {
+      background-color: #ee105a;
+    }
+
+    .content {
+      display: none;
+      margin-top: 10px;
+      padding: 15px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* *************** */
+    body {
+      font-family: "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+   
+    .container {
+      font-size: larger;
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            font-size: larger;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #e91e63;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .tip {
+            padding: 10px;
+            background-color: #ffe6f1;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: #e91e63;
+            font-weight: bold;
+        }
+
+        a {
+            color: #e91e63;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .icon {
+            margin-right: 8px;
+        }
+
+  
+
+   
+
+  
+
+   
+   
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- زر 1 -->
+    <button class="button" onclick="toggleContent('content1')">
+      <span id="icon1" class="icon">+</span>
+ثلاثة الأشهر الاولى (1 - 3)
+    </button>
+    <div id="content1" class="content">
+      <div class="container">
+        <!-- محتوى زر 1 -->
+        <div class="container">
+          <h1>نصائح للتعامل مع تغيرات الحمل</h1>
+          <ul>
+            <li>
+              <h2 class="section-title">١. تغيرات في الثدي مثل الألم والثقل:</h2>
+              <div class="tip">
+                - ارتدي حمالة صدر مريحة ومناسبة للحمل.<br>
+                - تجنبي الملابس الضيقة.
+              </div>
+            </li>
+            <li>
+              <h2 class="section-title">٢. التبول المتكرر:</h2>
+              <div class="tip">
+                - تفريغ المثانة بالكامل عند التبول.<br>
+                - قللي شرب السوائل قبل النوم مع الحفاظ على الترطيب طوال اليوم.
+              </div>
+            </li>
+            <li>
+              <h2 class="section-title">٣. التعب والإرهاق:</h2>
+              <div class="tip">
+                - ممارسة تمارين رياضية خفيفة مثل المشي وتقليل الأنشطة المرهقة.<br>
+                - التغذية السليمة.<br>
+                - الراحة والنوم الكافي (٧-٩ ساعات) وأخذ قيلولة خلال النهار.
+              </div>
+            </li>
+            <li>
+              <h2 class="section-title">٤. الغثيان والقيء (غثيان الصباح):</h2>
+              <div class="tip">
+                - شرب السوائل بانتظام.<br>
+                - تناول البسكويت المملح أو الخبز الجاف عند الاستيقاظ.<br>
+                - تناول وجبات صغيرة ومتكررة على مدار اليوم.<br>
+                - تجنبي النهوض المفاجئ من السرير.
+              </div>
+            </li>
+            <li>
+              <h2 class="section-title">٥. احتقان الأنف ونزيف الأنف:</h2>
+              <div class="tip">
+                - <span class="highlight">الاحتقان:</span> غسل الأنف بالماء الفاتر والملح، شرب الكثير من السوائل، رفع الرأس
+                أثناء النوم، تجنب الروائح القوية.<br>
+                - <span class="highlight">النزيف:</span> ترطيب الأنف باستخدام مرطب آمن مثل الفازلين، تنظيف الأنف بلطف، تجنب
+                الأماكن شديدة الجفاف.
+              </div>
+            </li>
+            <li>
+              <h2 class="section-title">٦. التغيرات النفسية وتقلب المزاج:</h2>
+              <div class="tip">
+                - مارسي تمارين الاسترخاء مثل التنفس العميق واليوغا.<br>
+                - احرصي على الدعم النفسي من الزوج والعائلة.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- زر 2 -->
+    <button class="button" onclick="toggleContent('content2')">
+      <span id="icon2" class="icon">+</span>
+ثلاثة الأشهر الوسطى (6 - 4)    </button>
+    <div id="content2" class="content">
+      <div class="container">
+        <!-- محتوى زر 2 -->
+        <div class="container">
+          <h1>نصائح للتعامل مع تغيرات الحمل</h1>
+          <ul>
+            <li>
+              <h2 class="section-title">١. خفقان القلب (ضربات القلب السريعة والقوية):</h2>
+              <div class="tip">
+                - استلقي على الجانب الأيسر عند النوم.<br>
+                - تجنبي المنبهات مثل القهوة والشاي.<br>
+                - مارسي تمارين الاسترخاء مثل التنفس العميق واليوغا.
+              </div>
+            </li>
+            <li>
+              <h2 class="section-title">٢. انخفاض ضغط الدم في وضع الاستلقاء وبطء القلب:</h2>
+              <div class="tip">
+                - تجنبي الانحناء المفاجئ.<br>
+                - تجنبي الاستلقاء على الظهر (استلقي على جانبك الأيسر).<br>
+                - شرب كميات كافية من الماء.<br>
+                - النهوض تدريجيًا.
+              </div>
+            </li>
+            <li>
+              <h2 class="section-title">٣. الرغبة في الطعام:</h2>
+              <div class="tip">
+                - حددي ما إذا كنتِ جائعة بالفعل أو إذا كان ذلك بسبب الملل.<br>
+                - شرب كميات كافية من الماء.<br>
+                - تجنبي الأطعمة الغنية بالسكر والوجبات السريعة.<br>
+                - تناول وجبات صغيرة وصحية ومتوازنة.
+              </div>
+            </li>
+            <li>
+              <h2 class="section-title">٤. حرقة المعدة:</h2>
+              <div class="tip">
+                - النوم بوضعية مائلة قليلًا مع رفع الرأس باستخدام وسادة.<br>
+                - تجنبي الأطعمة الحارة والدهنية.
+              </div>
+            </li>
+            <li>
+              <h2 class="section-title">٥. الإمساك:</h2>
+              <div class="tip">
+                - ممارسة الرياضة بانتظام.<br>
+                - تناول الخضروات والفواكه والحبوب الكاملة مثل الشعير والبرغل والكينوا.<br>
+                - شرب الكثير من الماء والسوائل.
+              </div>
+            </li>
+            <li>
+              <h2 class="section-title">٦. الإفرازات المهبلية البيضاء:</h2>
+              <div class="tip">
+                - شرب كميات كافية من الماء.<br>
+                - في حال استخدام الفوط الصحية اليومية يجب تغييرها بانتظام.<br>
+                - تجفيف المنطقة الحساسة جيدًا وارتداء ملابس داخلية قطنية.<br>
+                - غسل المنطقة الحساسة برفق باستخدام الماء الدافئ وتجنب الصابون المعطر.
+              </div>
+              <div class="tip highlight">
+                * يجب استشارة الطبيب إذا كانت الإفرازات مصحوبة بأعراض مثل:<br>
+                - حكة أو تهيج.<br>
+                - رائحة كريهة.<br>
+                - ألم أثناء التبول أو الجماع.<br>
+                - تغير في اللون مثل (الأصفر أو الأخضر).
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- زر 3 -->
+    <button class="button" onclick="toggleContent('content3')">
+      <span id="icon3" class="icon">+</span>
+ثلاثة الأشهر الأخيرة (9 - 7)    </button>
+    <div id="content3" class="content">
+      <div class="container">
+        <!-- محتوى زر 3 -->
+          <div class="container">
+            <h1>نصائح للتعامل مع أعراض الحمل</h1>
+            <ul>
+              <li>
+                <h2 class="section-title">١. ضيق في التنفس:</h2>
+                <div class="tip">
+                  - تجنب المجهود الشديد.<br>
+                  - التنفس بعمق.
+                </div>
+              </li>
+              <li>
+                <h2 class="section-title">٢. الأرق (في الأسبوع الأخير من الحمل):</h2>
+                <div class="tip">
+                  - شرب كميات كافية من الماء.<br>
+                  - الراحة خلال اليوم.<br>
+                  - تجنب الأنشطة المجهدة والمنبهات مثل القهوة والشاي.<br>
+                  - الاستحمام بماء دافئ.<br>
+                  - النوم على الجانب الأيسر.
+                </div>
+              </li>
+              <li>
+                <h2 class="section-title">٣. الذهاب المتكرر إلى الحمام:</h2>
+                <div class="tip">
+                  - لا يمكن منعها تمامًا، لكن يمكن محاولة تقليل كمية السوائل قبل النوم.
+                </div>
+              </li>
+              <li>
+                <h2 class="section-title">٤. الطلق الكاذب (التقلصات الكاذبة):</h2>
+                <div class="tip">
+                  - الحمام الدافئ.<br>
+                  - تدليك منطقة أسفل البطن.<br>
+                  - الاسترخاء والراحة.<br>
+                  - شرب الماء.<br>
+                  - تغيير الوضعية مثل المشي أو الاستلقاء.
+                </div>
+                <div class="tip highlight">
+                  * يجب الاتصال بالطبيب في حال:<br>
+                  - الشعور بإرهاق شديد أو دوخة.<br>
+                  - نزول دم أو سائل من المهبل.<br>
+                  - وجود ألم أو ضغط شديد.<br>
+                  - أصبحت التقلصات شديدة ومنتظمة.
+                </div>
+              </li>
+              <li>
+                <h2 class="section-title">٥. تشنجات الساق:</h2>
+                <div class="tip">
+                  - شرب الماء.<br>
+                  - وضع كمادات دافئة لتهدئة العضلات، أو كمادات باردة إذا كان هناك تورم.<br>
+                  - التدليك وتمديد الساق.<br>
+                  - ارتداء الجوارب الضاغطة.<br>
+                  - المكملات الغذائية مثل الكالسيوم والمغنيسيوم (بعد استشارة الطبيب).
+                </div>
+              </li>
+              <li>
+                <h2 class="section-title">٦. تورم الكاحلين:</h2>
+                <div class="tip">
+                  - تجنب الوقوف لفترات طويلة، وفي حال الوقوف يجب تغيير الوضع مثل المشي قليلًا.<br>
+                  - رفع القدمين عند الاستلقاء أو الجلوس.<br>
+                  - تجنب الأطعمة المالحة وشرب كميات كافية من الماء.<br>
+                  - الاستلقاء والراحة.<br>
+                  - ارتداء الجوارب الضاغطة (الجوارب الطبية).
+                </div>
+                <div class="tip highlight">
+                  * يجب استشارة الطبيب في الحالات التالية:<br>
+                  - تورم مفاجئ أو شديد في القدمين أو الكاحلين.<br>
+                  - تورم يصاحبه صداع شديد أو رؤية ضبابية.<br>
+                  - تورم في اليدين أو الوجه.<br>
+                  - ألم شديد أو احمرار في الساقين.<br>
+                  - صعوبة في التنفس أو شعور غير طبيعي.
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+
+ 
+
+   
+  </div>
+  <script>
+    function toggleContent(contentId) {
+      const content = document.getElementById(contentId);
+      const icon = document.getElementById("icon" + contentId.charAt(contentId.length - 1));
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        icon.textContent = "+";
+      } else {
+        content.style.display = "block";
+        icon.textContent = "-";
+      }
+    }
+  </script>
+</body>
+
+</html>

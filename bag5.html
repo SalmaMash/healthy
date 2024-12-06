@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> التغيرات الجسدية</title>
+    <style>
+        /***/
+        .buttonn {
+            width: 100%;
+            padding: 10px;
+            background-color: #e771c4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .containerr {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .h11 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .buttonn:hover {
+            width: 100%;
+            padding: 10px;
+            background-color: #e771c4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttonn:hover {
+            background-color: #c3718a;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /**/
+        .container {
+            margin: 20px;
+        }
+
+        .button {
+            background-color: #f04d84;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 22px;
+            margin-bottom: 10px;
+            font-size: larger;
+        }
+
+        .button:hover {
+            background-color: #ee105a;
+        }
+
+        .content {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* *************** */
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        mark {
+            background-color: #fe2f97;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .container {
+            font-size: larger;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #e91e63;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .tips {
+            border-left: 4px solid #e91e63;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #e91e63;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: #e91e63;
+            font-weight: bold;
+        }
+
+        /*  *********جدول************ */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #e91e63;
+            /* حدود زهرية */
+        }
+
+        th {
+            background-color: #e91e63;
+            /* خلفية زهرية للعناوين */
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fbeaf3;
+            /* خلفية وردية فاتحة للصفوف الزوجية */
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff;
+            /* خلفية بيضاء للصفوف الفردية */
+        }
+        .h0 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="h0">تختلف هذه التغيرات من امرأة لأخرى، وقد لا تظهر جميعها لدى كل النساء،  عادة ً تختفي معظم هذه التغيرات بعد
+       الولادة .</h1>
+        <!-- زر 1 -->
+        <button class="button" onclick="toggleContent('content1')">
+            <span id="icon1" class="icon">+</span>
+            الثدي  :
+        </button>
+        <div id="content1" class="content">
+            <div class="container">
+                <!-- محتوى زر 1 -->
+                    <div class="container">
+                        <h1>تغييرات الثدي أثناء الحمل</h1>
+                        <p>هناك عدد من التغييرات التي تطرأ على الثدي خلال الحمل، تتمثل في الآتي:</p>
+                        <ul>
+                            <li>
+                                <span class="section-title">1. النمو والتضخم:</span>
+                                <p>إذ يكبر ثدييك ويستمران في النمو طوال فترة الحمل، لذا توقعي زيادة حجم حمالة الصدر التي تحتاجينها، وقد
+                                    تشعرين بالحكة في ثدييك نتيجة تمدد الجلد، وقد تظهر علامات تمدد.</p>
+                            </li>
+                            <li>
+                                <span class="section-title">2. الرقة في الثدي وفرط الحساسية:</span>
+                                <p>قد تصبحين أكثر حساسية تجاه اللمس أو الضغط.</p>
+                            </li>
+                            <li>
+                                <span class="section-title">3. التغير في لون الحلمات والجلد المحيط:</span>
+                                <p>تصبح الحلمات والهالة المحيطة بها داكنة أكثر من المعتاد بسبب الهرمونات التي تؤثر على تصبغ الجلد.</p>
+                            </li>
+                            <li>
+                                <span class="section-title">4. ظهور العروق في الثديين:</span>
+                                <p>بسبب زيادة تدفق الدم.</p>
+                            </li>
+                            <li>
+                                <span class="section-title">5. تسرب اللبأ:</span>
+                                <p>يحدث عادة في الشهر الثالث تقريباً، إذ يبدأ ثدييك في تسريب مادة صفراء وسميكة. قد يتسرب اللبأ عند بعض
+                                    النساء في وقت أبكر، والبعض الآخر لا يحدث على الإطلاق.</p>
+                            </li>
+                            <li>
+                                <span class="section-title">6. زيادة بروز الحلمات والهالة:</span>
+                                <p>قد تلاحظين أن الحلمات والهالة المحيطة بها أصبحت أكثر بروزاً.</p>
+                            </li>
+                            <li>
+                                <span class="section-title">7. بروز نتوءات صغيرة على الهالة:</span>
+                                <p>وهي غدد صغيرة منتجة للزيت تظهر بوضوح أكثر.</p>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- زر 2 -->
+        <button class="button" onclick="toggleContent('content2')">
+            <span id="icon2" class="icon">+</span>
+           العظام والعضلات  :
+        </button>
+        <div id="content2" class="content">
+            <div class="container">
+                <!-- محتوى زر 2 -->
+                <div class="container">
+                    <h1>التغيرات الجسمانية أثناء الحمل</h1>
+                    <ul>
+                        <li>
+                            <span class="section-title">1. زيادة في مرونة الأربطة والمفاصل:</span>
+                            <p>بسبب بعض الهرمونات مما يساعد على تحضير الجسم للولادة، هذا قد يؤدي إلى آلام في الظهر والحوض.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">2. زيادة الضغط على العمود الفقري:</span>
+                            <p>يزداد وزن الجنين والرحم، مما يزيد الضغط على العمود الفقري والعضلات المحيطة.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">3. نقص المعادن مثل الكالسيوم:</span>
+                            <p>قد تعاني النساء الحوامل من نقص في معادن مثل الكالسيوم، حيث يستخدم الجنين هذه المعادن لنموه، مما قد يؤثر
+                                على كثافة عظام الأم. لذلك من المهم تناول غذاء متوازن وغني بالمعادن والفيتامينات.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر 3 -->
+        <button class="button" onclick="toggleContent('content3')">
+            <span id="icon3" class="icon">+</span>
+ الرحم  :
+        </button>
+        <div id="content3" class="content">
+            <div class="container">
+                <!-- محتوى زر 3 -->
+                <div class="container">
+                    <h1>تغيرات الرحم أثناء الحمل</h1>
+                    <ul>
+                        <li>
+                            <span class="section-title">1. زيادة الحجم:</span>
+                            <p>يزداد حجم الرحم بشكل ملحوظ ليستوعب نمو الجنين، حيث يتوسع من حوالي 50 جراماً قبل الحمل إلى حوالي 1,000
+                                جرام عند الولادة.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">2. زيادة تدفق الدم:</span>
+                            <p>يزداد تدفق الدم إلى الرحم لتوفير الأكسجين والمواد الغذائية اللازمة لنمو الجنين.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">3. زيادة سماكة العضلات:</span>
+                            <p>تزداد سماكة جدار الرحم خاصة في الثلث الأول من الحمل لدعم الجنين.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">4. تغيرات في عنق الرحم:</span>
+                            <p>يصبح عنق الرحم أكثر ليونة ويزداد سمك المخاط فيه لتشكيل سدادة مخاطية تحمي الرحم من العدوى.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر 4 -->
+        <button class="button" onclick="toggleContent('content4')">
+            <span id="icon4" class="icon">+</span>
+            المهبل والفرج  :
+        </button>
+        <div id="content4" class="content">
+            <div class="container">
+                <!-- محتوى زر 4 -->
+                <div class="container">
+                    <h1>تغيرات المهبل أثناء الحمل</h1>
+                    <ul>
+                        <li>
+                            <span class="section-title">1. زيادة تدفق الدم:</span>
+                            <p>يزداد تدفق الدم إلى المهبل والفرج مما يؤدي إلى لون أزرق مائل للبنفسجي.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">2. زيادة الإفرازات المهبلية:</span>
+                            <p>تصبح الإفرازات أكثر سماكة ولزوجة لحماية المهبل من العدوى.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">3. زيادة مرونة الجدران:</span>
+                            <p>يزداد سمك جدار المهبل ومرونته استعداداً للولادة.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر 5 -->
+        <button class="button" onclick="toggleContent('content5')">
+            <span id="icon5" class="icon">+</span>
+            المبيضين  :
+        </button>
+        <div id="content5" class="content">
+            <div class="container">
+                <!-- محتوى زر 5 -->
+<div class="container">
+    <h1>تغيرات المبيضين أثناء الحمل</h1>
+    <ul>
+        <li>
+            <span class="section-title">1. توقف الإباضة:</span>
+            <p>يتوقف المبيضان عن إنتاج البويضات بسبب زيادة مستويات بعض الهرمونات.</p>
+        </li>
+    </ul>
+</div>
+            </div>
+        </div>
+
+        <!-- زر 6 -->
+        <button class="button" onclick="toggleContent('content6')">
+            <span id="icon6" class="icon">+</span>
+           المشيمة  :
+        </button>
+        <div id="content6" class="content">
+            <div class="container">
+                <!-- محتوى زر 6 -->
+                <div class="container">
+                    <h1>دور المشيمة أثناء الحمل</h1>
+                    <ul>
+                        <li>
+                            <span class="section-title">1. دور حيوي في دعم الحمل:</span>
+                            <p>تتطور المشيمة لتصبح العضو الأساسي الذي يوفر الأكسجين والمواد الغذائية للجنين، كما تنتج بعض الهرمونات.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">2. حاجز وقائي:</span>
+                            <p>تعمل المشيمة كحاجز يمنع انتقال بعض المواد الضارة إلى الجنين.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر 7 -->
+        <button class="button" onclick="toggleContent('content7')">
+            <span id="icon7" class="icon">+</span>
+            الجهاز التنفسي  :
+        </button>
+        <div id="content7" class="content">
+            <div class="container">
+                <!-- محتوى زر 7 -->
+                <div class="container">
+                    <h1>تغيرات الجهاز التنفسي أثناء الحمل</h1>
+                    <ul>
+                        <li>
+                            <span class="section-title">1. ارتفاع الحجاب الحاجز:</span>
+                            <p>مع نمو الجنين، يزداد حجم الرحم، مما يدفع الحجاب الحاجز إلى الأعلى بحوالي 4 سم.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">2. زيادة الحاجة للأكسجين:</span>
+                            <p>تزيد حاجة الجسم للأكسجين لدعم العمليات الأيضية المتزايدة للأم والجنين، مما قد يؤدي إلى شعور المرأة الحامل
+                                بضيق التنفس، خاصة في الأشهر الأخيرة من الحمل.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">3. ضيق التنفس:</span>
+                            <p>تشعر بعض النساء الحوامل بضيق التنفس حتى عند ممارسة الأنشطة الخفيفة. إذا كان مصحوباً بأعراض أخرى مثل ألم
+                                الصدر أو السعال المستمر، فيجب استشارة الطبيب.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">4. زيادة تدفق الدم إلى الرئتين:</span>
+                            <p>يزيد تدفق الدم إلى الرئتين لتحسين تبادل الغازات، مما يعزز من نقل الأكسجين إلى الجنين عن طريق المشيمة.</p>
+                        </li>
+                    </ul>
+                    <h2>  <mark>نصائح للتخفيف من أعراض الجهاز التنفسي أثناء الحمل:</mark> </h2>
+                    <ul>
+                        <li>الحفاظ على وضعية جيدة أثناء الجلوس أو النوم لتقليل الضغط على الرئتين.</li>
+                        <li>ممارسة تمارين التنفس العميق لزيادة سعة الرئتين وتحسين تبادل الغازات.</li>
+                        <li>تجنب الأماكن المغلقة والملوثة للحفاظ على جودة الهواء المستنشق.</li>
+                        <li>استخدام مرطب للجو لتقليل جفاف الأنف والاحتقان.</li>
+                        <li>استشارة الطبيب في حالة ظهور ضيق تنفس شديد أو مستمر.</li>
+                    </ul>
+                    <p class="highlight">**هذه التغيرات في الجهاز التنفسي خلال فترة الحمل تعتبر طبيعية وتهدف إلى تلبية الاحتياجات
+                        المتزايدة للأم والجنين.**</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر 8 -->
+        <button class="button" onclick="toggleContent('content8')">
+            <span id="icon8" class="icon">+</span>
+            القلب والأوعية الدموية  :
+        </button>
+        <div id="content8" class="content">
+            <div class="container">
+                <!-- محتوى زر 8 -->
+                <div class="container">
+                    <h1>تغيرات القلب والأوعية الدموية أثناء الحمل</h1>
+                    <p>خلال فترة الحمل، تحدث العديد من التغيرات الفسيولوجية على القلب لدعم احتياجات الأم والجنين المتزايدة. تبدأ هذه
+                        التغيرات مبكراً وتستمر حتى الولادة لضمان توصيل الأكسجين والمغذيات بشكل كافٍ. إليك أهم هذه التغيرات:</p>
+                    <ul>
+                        <li>
+                            <span class="section-title">1. زيادة حجم الدم:</span>
+                            <p>يرتفع حجم الدم الكلي بحلول الثلث الثاني من الحمل، مما يساعد في تعويض فقدان الدم أثناء الولادة.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">2. زيادة النتاج القلبي:</span>
+                            <p>يرتفع النتاج القلبي بسبب زيادة حجم الدم ومعدل ضربات القلب.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">3. زيادة معدل ضربات القلب:</span>
+                            <p>يزيد معدل ضربات القلب بمقدار 10-20 نبضة في الدقيقة لتلبية الاحتياجات المتزايدة.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">4. انخفاض ضغط الدم:</span>
+                            <p>يحدث انخفاض طفيف في ضغط الدم خلال الثلث الأول والثاني من الحمل بسبب توسع الأوعية الدموية.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">5. زيادة تدفق الدم إلى الرحم والمشيمة:</span>
+                            <p>يتضاعف تدفق الدم إلى الرحم لضمان التغذية الكافية للجنين.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">6. توسع الأوعية الدموية:</span>
+                            <p>يحدث توسع في الأوعية الدموية لتحسين تدفق الدم.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">7. زيادة حجم البلازما مقابل كريات الدم الحمراء:</span>
+                            <p>يؤدي إلى فقر دم خفيف يُعرف بـ"فقر الدم الفسيولوجي للحمل".</p>
+                        </li>
+                        <li>
+                            <span class="section-title">8. زيادة خطر الإصابة بالدوالي الوريدية:</span>
+                            <p>يحدث ذلك بسبب الضغط المتزايد من الرحم على الأوردة الكبيرة.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">9. زيادة خطر الإصابة بتجلط الدم:</span>
+                            <p>يحدث بسبب ارتفاع عوامل التخثر وزيادة لزوجة الدم كآلية وقائية.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">10. زيادة حجم القلب وتغير موقعه:</span>
+                            <p>يزداد حجم القلب ويتغير موقعه قليلاً بسبب ضغط الرحم المتزايد.</p>
+                        </li>
+                    </ul>
+                    <h2>  <mark>نصائح لدعم صحة القلب والأوعية الدموية أثناء الحمل:</mark> </h2>
+                    <ul>
+                        <li>ممارسة التمارين الرياضية الخفيفة مثل المشي أو السباحة.</li>
+                        <li>شرب كميات كافية من الماء للحفاظ على حجم الدم.</li>
+                        <li>رفع الساقين عند الجلوس لتحسين تدفق الدم ومنع التورم.</li>
+                        <li>تجنب الوقوف أو الجلوس لفترات طويلة لتقليل خطر الدوالي.</li>
+                        <li>تناول مكملات الحديد وفق توصيات الطبيب للوقاية من فقر الدم.</li>
+                        <li>مراقبة ضغط الدم بانتظام، خاصة إذا كان لديك تاريخ من ارتفاع ضغط الدم.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر 9 -->
+        <button class="button" onclick="toggleContent('content9')">
+            <span id="icon9" class="icon">+</span>
+            الجهاز الهضمي :
+        </button>
+        <div id="content9" class="content">
+            <div class="container">
+                <!-- محتوى زر 9 -->
+                <div class="container">
+                    <h1>تغيرات الجهاز الهضمي أثناء الحمل</h1>
+                    <p>خلال فترة الحمل، يحدث الكثير من التغيرات الفسيولوجية في الجهاز الهضمي نتيجة للتغيرات الهرمونية والضغط المتزايد من
+                        الرحم. إليك أبرز هذه التغيرات:</p>
+                    <ul>
+                        <li>
+                            <span class="section-title">1. تغيرات في الهرمونات:</span>
+                            <p>تؤدي التغيرات الهرمونية إلى استرخاء العضلات الملساء في الجهاز الهضمي، مما يبطئ حركة الأمعاء ويسبب
+                                الإمساك.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">2. الغثيان والقيء:</span>
+                            <p>يُعرف بـ "غثيان الصباح" الذي قد يحدث في أي وقت من اليوم، ويصيب النساء في الأشهر الثلاثة الأولى من الحمل
+                                بسبب الزيادة في هرمونات الحمل.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">3. حرقة المعدة وعسر الهضم:</span>
+                            <p>بسبب زيادة بعض الهرمونات، يحدث استرخاء العضلة العاصرة السفلية للمريء، مما يسبب حرقة المعدة وعسر الهضم.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="section-title">4. زيادة الشهية والرغبة في تناول الطعام:</span>
+                            <p>قد تعاني بعض النساء من زيادة الشهية أو نقصانها، كما أن الوحام هو ظاهرة شائعة في الحمل.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">5. الإمساك:</span>
+                            <p>يحدث بسبب إبطاء حركة الأمعاء نتيجة لتأثيرات الهرمونات، وقد تزداد الأعراض بسبب مكملات الحديد.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">6. انتفاخ البطن والغازات:</span>
+                            <p>الاسترخاء في عضلات الجهاز الهضمي يؤدي إلى زيادة الغازات والانتفاخ.</p>
+                        </li>
+                        <li>
+                            <span class="section-title">7. تغييرات في حاسة التذوق والشم:</span>
+                            <p>قد تلاحظ بعض النساء زيادة في حساسية الشم أو تغييرات في حاسة التذوق مما يؤثر على الشهية ويساهم في الغثيان.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="section-title">8. البواسير:</span>
+                            <p>تحدث بسبب الإمساك المتكرر وضغط الرحم على الأوردة في منطقة الحوض.</p>
+                        </li>
+                    </ul>
+                    <h2>  <mark>نصائح للتخفيف من أعراض الجهاز الهضمي أثناء الحمل:</mark>  </h2>
+                    <ul>
+                        <li>تناول وجبات صغيرة متكررة بدلاً من وجبات كبيرة.</li>
+                        <li>تجنب الأطعمة الدسمة والحارة والمقلية التي قد تزيد من حرقة المعدة.</li>
+                        <li>شرب كميات كافية من الماء لتحسين حركة الأمعاء.</li>
+                        <li>زيادة تناول الألياف الغذائية من الفواكه والخضروات والحبوب الكاملة للحد من الإمساك.</li>
+                        <li>تجنب الاستلقاء مباشرة بعد الأكل لتقليل خطر حرقة المعدة.</li>
+                        <li>استشارة الطبيب بشأن مكملات الحديد إذا كانت تسبب الإمساك، حيث يمكن للطبيب تعديل الجرعة أو نوع المكمل.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر 10 -->
+        <button class="button" onclick="toggleContent('content 10')">
+            <span id="icon 10" class="icon">+</span>
+            وزن الجسم  :
+        </button>
+        <div id="content 10" class="content">
+            <div class="container">
+                <!-- محتوى زر 10 -->
+                <div class="container">
+                    <h1>زيادة الوزن واحتياجات المرأة الحامل</h1>
+                    <p>تعد زيادة الوزن أحد أوضح التغيرات الفسيولوجية أثناء الحمل، ويرجع سبب زيادة الوزن إلى:</p>
+                    <ul>
+                        <li>زيادة وزن وحجم الجنين والرحم والمشيمة والسائل الأمينوسي (ماء الرأس).</li>
+                        <li>زيادة تراكم الدهون واحتباس السوائل في جسم الحامل.</li>
+                    </ul>
+                    <p>ويمكن توقع بعض الزيادة الإضافية في الوزن في حالة الحمل بتوائم. وقد تسبب السمنة أو زيادة الوزن عن المعدل الطبيعي
+                        قبل الحمل ارتفاع معدلات حدوث مخاطر ومضاعفات الحمل، بما فيها ارتفاع ضغط الدم ومرض سكر الحوامل.</p>
+                    <p>تنصح السيدات المصابات بالسمنة بخسارة حوالي <mark>5 كجم</mark> قبل الحمل لتقليل معدلات مخاطر الحمل واحتمالية
+                        الحصول على جنين أصغر من الحجم الطبيعي.</p>
+                
+                    <h2>الاحتياجات الغذائية:</h2>
+                    <ul>
+                        <li>تحتاج المرأة الحامل لزيادة في استهلاك السعرات الحرارية بمعدل <mark>300 سعرة حرارية/اليوم</mark>.</li>
+                        <li>إضافة إلى حاجتها اليومية منها قبل بدء الحمل.</li>
+                        <li>أما عن احتياجاتها من البروتين فيُفترض أن يتراوح استهلاكها بين <mark>70 – 75 غرام/اليوم</mark>.</li>
+                    </ul>
+                    <p>يوصي العديد من الأطباء بضرورة تناول فيتامينات وتحديداً <mark>حمض الفوليك</mark> الذي تتمثل أهميته في الحد من
+                        العيوب الخلقية في الأنبوب العصبي للجنين، بالإضافة إلى الأحماض الدهنية (<mark>الأوميغا- 3</mark>) ذات الأهمية في
+                        دعم التطور العقلي والعصبي للجنين.</p>
+                </div>
+            </div>
+        </div>
+   
+    <!--زر 11 -->
+    <button class="button" onclick="toggleContent('content11')">
+        <span id="icon11" class="icon">+</span>
+        الجهاز البولي  :
+    </button>
+    <div id="content11" class="content">
+        <div class="container">
+            <!-- محتوى زر 11 -->
+            <div class="container">
+                <h1>تغيرات الجهاز البولي أثناء الحمل</h1>
+                <ul>
+                    <li><strong>1.</strong> تضخم الكلى وزيادة تدفق الدم لتحسين التخلص من الفضلات.</li>
+                    <li><strong>2.</strong> اتساع الحالب بسبب الهرمونات، مما قد يزيد من خطر التهابات المسالك البولية.</li>
+                    <li><strong>3.</strong> زيادة التبول نتيجة ضغط الرحم على المثانة.</li>
+                    <li><strong>4.</strong> زيادة معدل الترشيح في الكلى، مما يجعلها تخرج فضلات أكثر من الجسم.</li>
+                </ul>
+                <p>هذه التغييرات تهدف لدعم صحة الأم والجنين.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!--زر12  -->
+    <button class="button" onclick="toggleContent('content12')">
+        <span id="icon12" class="icon">+</span>
+      الجلد   :
+    </button>
+    <div id="content12" class="content">
+        <div class="container">
+            <!-- محتوى زر 12 -->
+            <div class="container">
+                <h1>تغيرات الجلد أثناء الحمل</h1>
+                <ul>
+                    <li><strong>1.</strong> <mark>الكلف:</mark> يظهر كتصبغات بنية داكنة على الوجه، خاصة في الجبهة والخدين والأنف،
+                        ويعود سببه إلى زيادة إفراز بعض الهرمونات.</li>
+                    <li><strong>2.</strong> <mark>خط أسود:</mark> هو خط داكن يظهر عمودياً من السرة إلى منطقة العانة، يحدث بسبب زيادة
+                        صبغة الميالنين في الجلد.</li>
+                    <li><strong>3.</strong> <mark>عالمات التمدد:</mark> تظهر كخطوط وردية أو أرجوانية على البطن، الثديين، الفخذين،
+                        والأرداف نتيجة تمدد الجلد بسبب زيادة الوزن ونمو الجنين، مع الوقت تتحول إلى لون أفتح وأقل وضوحاً.</li>
+                    <li><strong>4.</strong> <mark>الإحمرار والحكة:</mark> قد تظهر بقع حمراء متهيجة على الجلد، وقد يصاحبها حكة شديدة
+                        خاصة في منطقة البطن.</li>
+                    <li><strong>5.</strong> <mark>الدوالي العنكبوتية:</mark> تحدث بسبب زيادة حجم الدم وضغط الرحم المتزايد على
+                        الأوردة، تظهر على شكل شعيرات دموية صغيرة وملونة (زرقاء أو حمراء) تحت الجلد، خاصة في الساقين.</li>
+                    <li><strong>6.</strong> <mark>زيادة نمو الشعر والأظافر:</mark> بعض الحوامل قد يلاحظن زيادة في نمو الشعر وكثافته،
+                        خاصة على الوجه والجسم، وذلك بسبب ارتفاع مستويات الهرمونات.</li>
+                    <li><strong>7.</strong> <mark>زيادة إفراز العرق والزيوت:</mark> يمكن أن يزداد إفراز العرق والزيوت في الجلد، مما
+                        يؤدي أحياناً إلى ظهور حب الشباب.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+  
+
+
+    
+     </div>
+    <script>
+          function toggleContent(contentId) {
+                const content = document.getElementById(contentId);
+                const icon = document.getElementById("icon" + contentId.charAt(contentId.length - 1));
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                    icon.textContent = "+";
+                } else {
+                    content.style.display = "block";
+                    icon.textContent = "-";
+                }
+            }
+    </script>
+    </body>
+    
+    </html>

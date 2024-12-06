@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرعاية الطبية</title>
+    <style>
+     
+       /**تنسيق*/
+       body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .containerr {
+            font-size: larger;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+        }
+
+        h2 {
+            color: #dc3545;
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        ul {
+            list-style-type: square;
+            padding: 0 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            background-color: #f8d7da;
+            padding: 10px;
+            border-radius: 5px;
+            color: #721c24;
+        }
+
+        .note {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        .section-title {
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-top: 20px;
+        }
+
+        .important {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        a {
+            color: #0d0f11;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+       /***/
+
+        .button {
+            background-color: #f04d84;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 22px;
+            margin-bottom: 10px;
+            font-size: larger;
+        }
+
+        .button:hover {
+            background-color: #ee105a;
+        }
+
+        .content {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* *************** */
+
+
+        .container {
+            font-size: larger;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        /*تاريخ الولادة*/
+           label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+            color: #333;
+        }
+              input[type="date"], .buttton {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+          .buttton {
+            background-color: #e91e63;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buttton:hover {
+            background-color: #d81b60;
+        }
+         p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        p span {
+            color: #e91e63;
+        
+    }
+  
+    body {
+      font-family: "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+      color: #333;
+      background-color: #f7f7f7;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #f04d84;
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #e91e63;
+      padding-bottom: 5px;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-right: 20px;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .highlight {
+      color: #e91e63;
+      font-weight: bold;
+    }
+    .m{
+        background-color: rgb(243, 99, 147);
+    }
+    #m {
+                background-color: rgb(243, 99, 147);
+
+    }
+</style>
+   
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- زر 1 -->
+        <button class="button" onclick="toggleContent('content1')">
+            <span id="icon1" class="icon">+</span>
+متى موعد ولادتك المتوقع :
+        </button>
+        <div id="content1" class="content">
+            <div class="container">
+                <!-- محتوى زر 1 -->
+                    <div class="container">
+                      
+                            <h1>حاسبة تاريخ الولادة المتوقع</h1>
+                            <label for="last-period">أدخل تاريخ آخر دورة شهرية:</label>
+                            <input type="date" id="last-period">
+                            <button class="buttton" onclick="calculateEDD()">احسب</button>
+                            <p id="edd-result"></p>
+                       
+                    </div>
+            </div>
+        </div>
+
+        <!-- زر 2 -->
+        <button class="button" onclick="toggleContent('content2')">
+            <span id="icon2" class="icon">+</span>
+            الرعاية الطبية
+        </button>
+        <div id="content2" class="content">
+            <div class="container">
+                <!-- محتوى زر 2 -->
+                <div class="container">
+                    <h1>الرعاية الطبية خلال فترة الحمل</h1>
+                    <p>
+                        يجب على الأم الحامل المواظبة على زيارة الطبيب بانتظام لضمان سلامتها وسلامة الجنين، وذلك وفقًا للجدول التالي:
+                    </p>
+                    <ul>
+                        <li>زيارة مرة واحدة كل شهر خلال الفترة الأولى من الحمل (الأسبوع 1-28) باستثناء حدوث علامات خطيرة.</li>
+                        <li>زيارة مرة واحدة كل أسبوعين خلال الفترة الثانية من الحمل (الأسبوع 28-36).</li>
+                        <li>زيارة مرة واحدة كل أسبوع خلال الفترة الثالثة من الحمل (الأسبوع 36-40).</li>
+                    </ul>
+                <h1>الفحوصات المتخذة عند الزيارات خلال فترة الحمل</h1>
+                <p>
+                    بعد تأكيد الحمل، يجب أن تخضع المرأة لفحص سريري، ويفضل إجراؤه بين الأسبوعين السادس والثامن من الحمل.
+                    خلال هذه الفترة، يمكن تقدير طول فترة الحمل والتنبؤ بتاريخ الولادة بدقة.
+                </p>
+                <p class="highlight">يشمل الفحص السريري الأول:</p>
+                <ul>
+                    <li>قياس الوزن والطول وضغط الدم.</li>
+                    <li>فحص الكاحلين للتحري عن وجود تورم.</li>
+                    <li>فحص الحوض لتحديد حجم ووضعية الرحم.</li>
+                    <li>اختبارات الدم للكشف عن الأمراض المعدية (مثل الزهري، التهاب الكبد، وفيروس نقص المناعة) وتحليل عدد خلايا الدم.
+                    </li>
+                    <li>تحديد نوع الدم وحالة العامل الريزيسي (إيجابية أو سلبية).</li>
+                    <li>اختبارات البول للكشف عن العدوى أو السكر أو البروتين.</li>
+                    <li>فحص عنق الرحم للتحري عن سرطان عنق الرحم والعدوى المنتقلة جنسيًا.</li>
+                    <li>
+                        بعد اختبار فحص عنق الرحم، تؤخذ عينة أخرى من الأنسجة للتحري عن العدوى المنتقلة بالجنس، مثل داء السيلان
+                        والعدوى المتدثرة.
+                   </li>
+                </ul>
+                
+
+<h2>اختبار فحص عنق الرحم</h2>
+<p>
+    يتم أخذ عينة من الأنسجة من عنق الرحم للتحري عن سرطان عنق الرحم.
+</p>
+
+<h2>اختبار للتحري عن العدوى المنتقلة بالجنس</h2>
+<p>
+    مباشرة بعد اختبار فحص عنق الرحم، يتم أخذ عينة أخرى من الأنسجة للتحري عن العدوى المنتقلة بالجنس، مثل داء السيلان
+    والعدوى المتدثرة.
+</p>
+<h2>اختبارات للتحري عن السكر</h2>
+<p>في كل زيارة، يُجرى اختبار للبول للتحري عن السكر. قد يشير وجود السكر في البول إلى الإصابة بداء السكري.</p>
+<p>يتم التحري عن داء السكري في أقرب وقت ممكن. حتى إذا لم يحتوي البول على السكر، ينبغي القيام بفحص للدم للتحري عن السكري
+    عند جميع النساء.</p>
+<p>يتم إجراء اختبار دموي للتحري عن السكري خلال فترة الحمل (السّكري الحملي). يُجرى هذا الاختبار الدموي بين الأسبوعين 24
+    إلى 28 من الحمل، حيث يُقاس مستوى السكر (الغلوكوز) في الدم بعد ساعة واحدة من شرب المرأة للسائل الذي يحتوي على كمية
+    معينة من الغلوكوز. إذا كانت المرأة معرضة لخطر الإصابة بسكري الحمل، يُفضل إجراء الاختبار قبل الأسبوع الثاني عشر.</p>
+
+<h2>تحري البروتين في البول</h2>
+<p>يُجرى تحري عن البروتين في كل زيارة. قد يشير وجود البروتين في البول إلى حدوث مقدمات تسمم الحمل (وهو نوع من ارتفاع ضغط
+    الدم يحدث خلال فترة الحمل).</p>
+
+
+<h1>اختبارات للتحري عن اضطرابات الغدة الدرقية</h1>
+
+<h2>متى يتم إجراء الاختبارات؟</h2>
+<p>تُجرى اختبارات دموية للتحري عن اضطرابات الغدة الدرقية في الحالات التالية:</p>
+
+<ul>
+    <li>لديها أعراض لإصابة باضطراب درقي.</li>
+    <li>أتت من منطقة تحدث فيها حالات قصور يود متوسطة إلى شديدة، مما يسبب اضطرابات في الغدة الدرقية.</li>
+    <li>لديها أقارب أصيبوا باضطرابات في الغدة الدرقية.</li>
+    <li>مصابة باضطراب في الغدة الدرقية.</li>
+    <li>تعاني من داء السكري من النوع الأول.</li>
+    <li>سبق أن عانت من مشاكل في الخصوبة، أو والدة مبكرة لطفل، أو تعرضت لإسقاط.</li>
+    <li>خضعت لعلاج شعاعي في الرأس أو الرقبة.</li>
+    <li>تعاني من بدانة شديدة.</li>
+    <li>تجاوزت سن الثلاثين من العمر.</li>
+</ul>
+
+<h2>الفحوصات في كل زيارة</h2>
+<ul>
+    <li>تسجيل وزن المرأة وضغط الدم.</li>
+    <li>فحص حجم الرحم للتحقق من نمو الجنين بشكل طبيعي.</li>
+    <li>فحص الكاحلين للتحري عن وجود تورم.</li>
+    <li>التحقق من ضربات القلب عند الجنين، يتم عادة بين الأسبوعين العاشر والحادي عشر باستخدام جهاز تخطيط الصدى المحمول.
+    </li>
+    <li>في كل زيارة، يتم فحص ضربات القلب لتحديد ما إذا كانت طبيعية.</li>
+    <li>اختبار للبول للتحري عن السكر، حيث قد يشير وجود السكر في البول إلى الإصابة بداء السكري.</li>
+</ul>
+
+<h2>اختبارات إضافية</h2>
+<ul>
+    <li>تحري عن داء السكري في أقرب وقت ممكن حتى إذا لم يحتوي البول على السكر.</li>
+    <li>اختبار دم لتحري عن السكري الحملي بين الأسبوعين 24 إلى 28 من الحمل.</li>
+    <li>تحري عن البروتين في البول في كل زيارة للتحقق من وجود مقدمات تسمم الحمل.</li>
+    <li>اختبارات دموية للتحري عن اضطرابات الغدة الدرقية في الحالات التالية:
+        <ul>
+            <li>وجود أعراض لإصابة باضطراب درقي.</li>
+            <li>القدوم من منطقة تحدث فيها حالات قصور يود متوسطة إلى شديدة.</li>
+            <li>وجود أقارب مصابين باضطرابات درقية.</li>
+            <li>وجود مشاكل في الخصوبة أو حدوث ولادة مبكرة أو إسقاط.</li>
+            <li>الخضوع لعلاج شعاعي في الرأس أو الرقبة.</li>
+            <li>التعافي من بدانة شديدة أو تجاوز سن الثلاثين.</li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+
+                <h2>مواعيد متابعة الحمل</h2>
+                <ul>
+                    <li>كل أربعة أسابيع حتى الأسبوع الثامن والعشرين من الحمل.</li>
+                    <li>كل أسبوعين حتى الأسبوع السادس والثلاثين من الحمل.</li>
+                    <li>كل أسبوع حتى الولادة.</li>
+                </ul>
+                  
+                
+                    <h2>مواعيد الفحوصات الروتينية</h2>
+                    <ul>
+                        <li>كل أربعة أسابيع حتى الأسبوع الثامن والعشرين من الحمل.</li>
+                        <li>كل أسبوعين حتى الأسبوع السادس والثلاثين من الحمل.</li>
+                        <li>كل أسبوع حتى الولادة.</li>
+                    </ul>
+                
+                 
+                
+                    <h2>التصوير بتخطيط الصدى</h2>
+                    <p>
+                        يُعتبر التصوير بالموجات فوق الصوتية آمنًا ومفيدًا. يُنصح بإجرائه مرة واحدة على الأقل بين الأسبوعين 16-20 للتأكد
+                        من نمو الجنين بشكل طبيعي وتحديد موعد الولادة المتوقع.
+                    </p>
+                
+
+
+                </div>
+            </div>
+        </div>
+       
+
+            <!-- زر 3 -->
+            <button class="button" onclick="toggleContent('content3')">
+                <span id="icon3" class="icon">+</span>
+                علامات الخطر التي قد تحدث اثناء الحمل
+            </button>
+            <div id="content3" class="content">
+                <div class="container">
+                    <!-- محتوى زر 3 -->
+                    <div class="container">
+                        <h1>أعراض خطر الحمل والوقاية منها</h1>
+                    
+                        <h2 class="m">الثلاثة أشهر الأولى (1-3 أشهر):</h2>
+                        <ul>
+                            <li>القشعريرة والحمى</li>
+                            <li>التقيؤ المستمر</li>
+                            <li>الألم في البطن</li>
+                            <li>حرقان أثناء البول</li>
+                            <li>النزيف المهبلي</li>
+                        </ul>
+                    
+                        <h2 class="m">الأشهر الست الأخيرة (4-9 أشهر):</h2>
+                        <ul>
+                            <li>تغير في حركة الجنين</li>
+                            <li>ألم شديد في الظهر أو الخاصرة</li>
+                            <li>الشعور بالحرقان أثناء التبول</li>
+                            <li>القشعريرة والحمى</li>
+                            <li>نزول سائل مفاجئ من المهبل قبل الأسبوع 37</li>
+                            <li>تشنج العضلات</li>
+                            <li>صداع شديد</li>
+                            <li>اضطرابات الرؤية</li>
+                            <li>تقلصات الرحم قبل الأسبوع 37</li>
+                            <li>ارتفاع ضغط الدم أكثر من (140/90)</li>
+                            <li>ضغط الدم الطبيعي (120/80)</li>
+                            <li>وجود الجلوكوز في البول (يحدث عندما يكون الجلوكوز في الدم مرتفعاً)</li>
+                            <li>زيادة الوزن أكثر من 2 كيلو في الأسبوع</li>
+                            <li>إلتهاب المسالك البولية</li>
+                            <li>ألم في المنطقة فوق السرة</li>
+                            <li>النزيف المهبلي</li>
+                            <li>تورم عام في أجزاء مختلفة من الجسم بسبب تجمع السوائل</li>
+                        </ul>
+                    
+                        <h2 class="section-title">أعراض التهاب المسالك البولية:</h2>
+                        <ul>
+                            <li>حرقة أثناء التبول</li>
+                            <li>تكرار التبول مع إخراج كميات قليلة</li>
+                            <li>ألم أو ضغط في أسفل البطن أو الظهر</li>
+                            <li>بول عكر أو ذو رائحة كريهة</li>
+                            <li>ارتفاع درجة الحرارة (في حالة وصول العدوى إلى الكلى)</li>
+                        </ul>
+                    
+                        <h2 class="section-title">الوقاية:</h2>
+                        <ul>
+                            <li>شرب الكثير من الماء يومياً</li>
+                            <li>التبول بانتظام وعدم تأخير الحاجة للتبول</li>
+                            <li>تنظيف المنطقة التناسلية من الأمام إلى الخلف بعد استخدام الحمام</li>
+                            <li>تفريغ المثانة بعد العلاقة الزوجية</li>
+                            <li>تجنب استخدام المنتجات المهبلية المعطرة</li>
+                        </ul>
+                    
+                        <p class="sub-section" id="m">استشارة الطبيب ضرورية عند ظهور أي أعراض.</p>
+                    </div>
+                </div>
+            </div>
+
+ 
+
+       
+    </div>
+    <script>
+        function toggleContent(contentId) {
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById("icon" + contentId.charAt(contentId.length - 1));
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.textContent = "+";
+            } else {
+                content.style.display = "block";
+                icon.textContent = "-";
+            }
+        }
+
+/*تاريخ الولادة*/
+            function calculateEDD() {
+                const lastPeriod = document.getElementById("last-period").value;
+                if (lastPeriod) {
+                    const lastPeriodDate = new Date(lastPeriod);
+                    const eddDate = new Date(lastPeriodDate);
+                    eddDate.setDate(eddDate.getDate() + 280); // Adding 280 days (40 weeks)
+                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                    document.getElementById("edd-result").textContent = "تاريخ الولادة المتوقع: " + eddDate.toLocaleDateString('ar-EG', options);
+                } else {
+                    document.getElementById("edd-result").textContent = "يرجى إدخال تاريخ آخر دورة شهرية.";
+                }
+            }
+
+
+    </script>
+</body>
+
+</html>

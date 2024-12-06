@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظرة على طفلك</title>
+    <style>
+
+
+
+.timeline {
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.timeline h1 {
+  font-size: 2.5rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 50px;
+}
+
+.stage {
+  position: relative;
+  margin-bottom: 40px;
+  opacity: 0; /* إخفاء المرحلة افتراضيًا */
+  transform: translateY(50px); /* تحريك المرحلة للأسفل */
+  transition: all 0.8s ease-out;
+}
+
+.stage .content {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stage img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.5s ease;
+}
+
+.stage p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.stage:hover img {
+  transform: scale(1.1); /* تكبير الصورة عند التمرير */
+}
+
+/* شريط زمني رأسي */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25px;
+  width: 4px;
+  height: 100%;
+  background: #ddd;
+}
+
+.stage::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border: 4px solid #6c63ff;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+/* تأثيرات الحركة */
+.stage.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+        /***/
+        .buttonn {
+            width: 100%;
+            padding: 10px;
+            background-color: #e771c4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .containerr {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .h11 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .buttonn:hover {
+            width: 100%;
+            padding: 10px;
+            background-color: #e771c4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttonn:hover {
+            background-color: #c3718a;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        /**/
+        .container {
+            margin: 20px;
+        }
+
+        .button {
+            background-color: #f04d84;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 22px;
+            margin-bottom: 10px;
+            font-size: larger;
+        }
+
+        .button:hover {
+            background-color: #ee105a;
+        }
+
+        .content {
+            display: none;
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* *************** */
+        body {
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        mark {
+            background-color: #fe2f97;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .container {
+            font-size: larger;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #e91e63;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .tips {
+            border-left: 4px solid #e91e63;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #e91e63;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: #e91e63;
+            font-weight: bold;
+        }
+
+        /*  *********عمر الحمل*********** */
+.containeer {
+  margin-right: 180px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 90%;
+    max-width: 320px;
+}
+
+.h2 {
+    color: #0f000e;
+}
+
+.label2 {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.input2 {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button3 {
+    background-color: #f66ead;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button3:hover {
+    background-color: #f494f5;
+}
+
+#resultt {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #e652c6;
+}
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+<button class="button" onclick="toggleContent('content1')">
+    <span id="icon1" class="icon">+</span>
+    تطور نمو طفلك  :
+</button>
+<div id="content1" class="content">
+    <div class="container">
+        <!-- محتوى زر 1 -->
+<div class="container">
+    <h1>تطور الجنين خلال أشهر الحمل</h1>
+    <p>تطور الجنين على مدار أشهر الحمل هو رحلة رائعة تحدث فيها تغييرات ملحوظة.</p>
+
+    <h2>الشهر الأول:</h2>
+    <ul>
+        <li>يبدأ الجنين على شكل كرة خلايا صغيرة تسمى <mark>البالستوسيست</mark>.</li>
+        <li>يتكون الكيس المحي والسائل الأمنيوسي.</li>
+    </ul>
+
+    <h2>الشهر الثاني:</h2>
+    <ul>
+        <li>تبدأ بعض الأعضاء الأساسية بالتشكل مثل القلب، ويبدأ بالنبض.</li>
+        <li>تبدأ الأطراف الصغيرة في الظهور مثل براعم اليدين والقدمين.</li>
+    </ul>
+
+    <h2>الشهر الثالث:</h2>
+    <ul>
+        <li>تبدأ ملامح الوجه في التشكل مثل الأنف والفم.</li>
+        <li>تتكون الأعضاء التناسلية، ولكن لا يمكن تحديد الجنس بعد.</li>
+    </ul>
+
+    <h2>الشهر الرابع:</h2>
+    <ul>
+        <li>يبدأ الجنين بتحريك أطرافه، ويمكن أن تشعري ببعض الحركات الخفيفة.</li>
+        <li>يمكن التعرف على جنس الجنين بالموجات فوق الصوتية.</li>
+    </ul>
+
+    <h2>الشهر الخامس:</h2>
+    <ul>
+        <li>يكون الجلد شفافاً والشعر يبدأ بالنمو.</li>
+        <li>الجنين يصبح أكثر نشاطاً، ويمكن الشعور بحركاته بوضوح.</li>
+    </ul>
+
+    <h2>الشهر السادس:</h2>
+    <ul>
+        <li>تصبح ملامح الجنين أوضح مثل الرموش والحواجب.</li>
+        <li>تطور الرئة، وتبدأ بالاستعداد للتنفس خارج الرحم.</li>
+    </ul>
+
+    <h2>الشهر السابع:</h2>
+    <ul>
+        <li>يزداد وزن الجنين، وتصبح حركاته أقوى.</li>
+        <li>تتطور حاسة السمع، ويمكن أن يسمع أصواتاً خارجية.</li>
+    </ul>
+
+    <h2>الشهر الثامن:</h2>
+    <ul>
+        <li>يكتسب الجنين المزيد من الدهون استعداداً للولادة.</li>
+        <li>تتطور الرئة بشكل كافٍ لدعم التنفس الخارجي.</li>
+    </ul>
+
+    <h2>الشهر التاسع:</h2>
+    <ul>
+        <li>يكتمل نمو الجنين، ويستعد للخروج من الرحم.</li>
+        <li>يتحرك إلى الوضعية الرأسية، ويصبح مستعداً للولادة.</li>
+    </ul>
+</div>
+
+    </div>
+</div>
+
+<!-- زر 2 -->
+<button class="button" onclick="toggleContent('content2')">
+    <span id="icon2" class="icon">+</span>
+كم عمر طفلك الآن وكيف يبدو  :
+</button>
+<div id="content2" class="content">
+    <div class="container">
+        <!-- محتوى زر 2 -->
+        <div class="containeer">
+            <h1 class="h2"> <mark>حاسبة عمر الحمل</mark> </h1>
+            <form id="pregnancy-form">
+                <label class="label2" for="last-period">تاريخ أول يوم من آخر دورة شهرية:</label>
+                <input class="input2" type="date" id="last-period" required>
+                <button class="button3" type="button" id="calculate-button">احسب</button>
+            </form>
+            <div id="resultt"></div>
+        </div>
+
+    <section class="timeline">
+        <h1>رحلة نمو الجنين</h1>
+        <div class="timeline-container">
+            <!-- كل مرحلة تمثل صورة -->
+            <div class="stage">
+                <div class="content">
+                    <img src="week1.jpg" alt="">
+<p>الاسابيع الثلاثة الاولى</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week2.jpg" alt="">
+<p>الاسبوع الخامس</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week3.jpg" alt="">
+<p>الاسبوع السادس</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week4.jpg" alt="">
+<p>الاسبوع السابع</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week5.jpg" alt="">
+<p> الاسبوع  العاشر</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week6.jpg" alt="">
+<p>الاسبوع  الثاني عشر</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week7.jpg" alt="">
+<p>الاسبوع الخامس عشر</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week8.jpg" alt="">
+<p>الاسبوع السابع عشر</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week9.jpg" alt="">
+<p>الاسبوع  العشرون</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week10.jpg" alt="">
+<p>الاسبوع الرابع والعشرون</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week11.jpg" alt="">
+<p>الاسبوع  السابع والعشرون</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week12.jpg" alt="">
+<p>الاسبوع الثاني والثلاثون</p>
+                </div>
+            </div>
+            <div class="stage">
+                <div class="content">
+                    <img src="week13.jpg" alt="">
+<p>الاسبوع  السابع والثلاثون</p>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+
+
+
+    </div>
+
+
+
+</div>
+
+    </div>
+
+
+    <script>
+        function toggleContent(contentId) {
+            const content = document.getElementById(contentId);
+            const icon = document.getElementById("icon" + contentId.charAt(contentId.length - 1));
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.textContent = "+";
+            } else {
+                content.style.display = "block";
+                icon.textContent = "-";
+            }
+        }
+/*عمر الحمل*/
+    document.getElementById("calculate-button").addEventListener("click", function () {
+        const lastPeriodDate = document.getElementById("last-period").value;
+
+        if (!lastPeriodDate) {
+            alert("يرجى إدخال تاريخ آخر دورة شهرية.");
+            return;
+        }
+
+        const lastPeriod = new Date(lastPeriodDate);
+        const today = new Date();
+
+        const diffTime = Math.abs(today - lastPeriod);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        const weeks = Math.floor(diffDays / 7);
+        const days = diffDays % 7;
+
+        const resultText = `عمر الحمل: ${weeks} أسبوع و ${days} يوم.`;
+        document.getElementById("resultt").textContent = resultText;
+    });
+
+/** الصور*/
+    const stages = document.querySelectorAll('.stage');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view'); // إضافة الحركة عند الظهور
+            }
+        });
+    }, { threshold: 0.5 });
+
+    stages.forEach((stage) => {
+        observer.observe(stage); // مراقبة كل مرحلة
+    });
+    </script>
+
+</body>
+
+</html>
